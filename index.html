@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+    <title>KIA Seltos VietNam Group 86</title>
+    <link rel="stylesheet" href="assets/app.css?v=2" media="all"/>
+    <style type="text/css">
+        .hidden{
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1><a href="./"><img src="assets/logo.png" class="logo" width="883" height="498"/></a></h1>
+    <div class="tbl-wrap">
+        <div class="heading">
+            <h1 class="show-on-logged">Danh sách các thành viên</h1>
+            <h1 class="hide-on-logged">KIA Seltos VietNam Group</h1>
+            <button type="button" class="btn-register">Đăng ký thông tin</button>
+            <button type="button" class="btn-login">Admin Đăng nhập</button>
+            <button type="button" class="btn-config hidden">Cấu Hình</button>
+        </div>
+        <div class="tbl-wrap2">
+            <div class="tbl-search">
+                <div class="tbl-search-wrap">
+                    <label for="tbl_search">Tìm kiếm</label>
+                    <input type="text" id="tbl_search" placeholder="Nhập biển số: 30A-12345"/>
+                </div>
+                <div class="tbl-search-result">
+                </div>
+            </div>
+            <table id="listUser" style="display: none">
+                <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên chủ xe</th>
+                    <th>Nick Facebook</th>
+                    <th>Biển số</th>
+                    <th>Mã số</th>
+                    <th>SĐT</th>
+                    <th>Tỉnh,Thành Phố</th>
+                    <th>Size áo</th>
+                    <th>Địa chỉ nhận Logo</th>
+                    <th>Ngày tạo</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="11">Đang tải dữ liệu</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="pp-register">
+        <button class="close-pp-reg"><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10 fa-2x"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></button>
+        <div class="pp-reg-inner">
+            <div class="pp-header">
+                <h2>Đăng ký thành viên</h2>
+                <h2 class="show-on-logged">Thông tin thành viên</h2>
+            </div>
+            <div class="pp-content">
+                <div class="frm frm-register">
+                    <div class="frm-row">
+                        <div class="frm_code"><label>Mã số</label> <span id="frm_code"></span></div>
+                        <input type="hidden" name="frm_user_id" id="frm_user_id">
+                    </div>
+                    <div class="frm-row">
+                        <label for="frm_name">Tên chủ xe</label>
+                        <input type="text" id="frm_name" name="frm_name" class="frm-input" maxlength="100"/>
+                    </div>
+                    <div class="frm-row">
+                        <label for="frm_bks">Biển kiểm soát</label>
+                        <input type="text" id="frm_bks" name="frm_bks" class="frm-input" maxlength="9" size="9" placeholder="Ví dụ: 30A-12345"/>
+                    </div>
+                    <div class="frm-row">
+                        <label for="frm_fb">Nick Facebook</label>
+                        <input type="text" id="frm_fb" name="frm_fb" class="frm-input" maxlength="100"/>
+                    </div>
+                    <div class="frm-row">
+                        <label for="frm_sdt">Số điện thoại</label>
+                        <input type="tel" id="frm_sdt" name="frm_sdt" class="frm-input" maxlength="35"/>
+                    </div>
+                    <div class="frm-row">
+                        <label for="frm_zone">Tỉnh,Thành Phố</label>
+                        <input type="text" id="frm_zone" name="frm_zone" class="frm-input"/>
+                    </div>
+                    <div class="frm-row">
+                        <label for="frm_address">Địa chỉ nhận Logo</label>
+                        <input type="text" id="frm_address" name="frm_address" class="frm-input"/>
+                    </div>
+                    <div class="frm-row">
+                        <label for="frm_size">Size áo</label>
+                        <input type="text" id="frm_size" name="frm_size" class="frm-input"/>
+                    </div>
+                    <div class="frm-row">
+                        <button type="button" class="btn-reg-ok">Hoàn thành</button>
+                        <button type="button" class="btn-reg-edit">Cập nhật</button>
+                    </div>
+                </div>
+                <div class="frm frm-login">
+                    <h2>Admin đăng nhập</h2>
+                    <div class="frm-row">
+                        <label for="frm_username">Tài khoản</label>
+                        <input type="text" id="frm_username" name="frm_username" class="frm-input" maxlength="100"/>
+                    </div>
+                    <div class="frm-row">
+                        <label for="frm_password">Mật khẩu</label>
+                        <input type="password" id="frm_password" name="frm_password" class="frm-input"/>
+                    </div>
+                    <div class="frm-row">
+                        <button type="button" class="btn-login-ok">Đăng nhập</button>
+                    </div>
+                </div>
+            </div>
+            <div class="frm-result"></div>
+        </div>
+    </div>
+    <div class="pp-config">
+        <button class="close-pp-config"><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10 fa-2x"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></button>
+        <div class="pp-header">
+            <h2>Cấu hình chung</h2>
+        </div>
+        <div class="pp-content">
+            <div class="frm">
+                <div class="frm-row">
+                    <div class="frm_c_limit">
+                        <label>Giới hạn</label>
+                        <input type="number" name="frm_c_limit" id="frm_c_limit" value=""/>
+                    </div>
+                </div>
+                <div class="frm-row">
+                    <div class="frm_c_badcode">
+                        <label>Số xấu</label>
+                        <textarea name="frm_c_badcode" id="frm_c_badcode"></textarea>
+                        <p><small>các số cách nhau bằng dấu phẩy</small></p>
+                    </div>
+                </div>
+                <div class="frm-row">
+                    <div class="frm_c_badcode">
+                        <label>Số đẹp</label>
+                        <textarea name="frm_c_existcode" id="frm_c_existcode"></textarea>
+                        <p><small>các số cách nhau bằng dấu phẩy</small></p>
+                    </div>
+                </div>
+                <div class="frm-row">
+                    <button type="button" class="btn-config-ok">Hoàn thành</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<audio id="dpvaudio" autoplay loop allow="autoplay" style="display:none;">
+    <source src="assets/audioclip.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type='text/javascript' src='https://www.gstatic.com/firebasejs/7.6.2/firebase.js'></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type='text/javascript' src='assets/app.js?v=11'></script>
+</body>
+</html>

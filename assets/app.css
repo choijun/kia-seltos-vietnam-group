@@ -1,0 +1,364 @@
+*, :after, :before{
+    box-sizing: border-box;
+    box-sizing: border-box
+}
+body{
+    margin: 0;
+    font-size: 16px;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+img.logo{
+    width: 200px;
+    height: auto
+}
+body:not(.loggedin) .show-on-logged{
+    display: none
+}
+body.loggedin .hide-on-logged{
+    display: none
+}
+.loggedin table#listUser{
+    display: table !important
+}
+div#app{
+    width: 925px;
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 5vh
+}
+.heading{
+    text-align: center;
+    margin-bottom: 50px
+}
+h1{
+    margin: 0 0 30px;
+    color: #fff;
+    text-transform: uppercase
+}
+h2{
+    margin-top: 0
+}
+button{
+    background: #ed2627;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s
+}
+button:hover{
+    background-color: #000
+}
+.tbl-wrap{
+    width: 100%
+}
+table#listUser{
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    border-collapse: collapse;
+    background-color: #fff
+}
+table th, table td{
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    max-width: 200px;
+}
+table thead, table tr:nth-child(2n){
+    background-color: #f5f5f5
+}
+button.close-pp-reg{
+    padding: 5px;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+.close-pp-reg svg{
+    color: #fff;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    display: block
+}
+.frm-row{
+    margin-bottom: 10px;
+    position: relative
+}
+.frm-row:last-child{
+    margin-bottom: 0
+}
+.frm-row label{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px
+}
+.frm-row .frm-input{
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0
+}
+.pp-register{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    display: none;
+    max-width: 90%
+}
+.pp-reg-inner{
+    width: 500px;
+    max-width: 100%;
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0 0 20px #00000024;
+    overflow: auto;
+    height: 700px;
+    max-height: 100vh
+}
+.open-pp2 #app:before, .open-ppl #app:before, .open-pp #app:before{
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5
+}
+.open-pp2 .pp-register, .open-ppl .pp-register, .open-pp .pp-register{
+    display: block
+}
+.open-ppl .pp-reg-inner{
+    height: auto
+}
+.frm-row small{
+    color: red;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    pointer-events: none
+}
+.open-ppl .pp-register .frm-register{
+    display: none
+}
+.open-ppl .pp-register .frm-login{
+    display: block
+}
+.frm-result{
+    display: none
+}
+.send-code:not(.open-ppl) .pp-header, .send-code:not(.open-ppl) .pp-content{
+    display: none
+}
+.send-code .frm-result{
+    text-align: center;
+    display: block
+}
+.send-code .frm-result h3{
+    margin: 0 0 1em;
+    font-size: 22px
+}
+.send-code .frm-result p{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    color: green;
+    margin: 0
+}
+.send-code .pp-reg-inner{
+    height: auto
+}
+#listUser td:nth-child(3){
+    text-transform: uppercase
+}
+.frm-login{
+    display: none
+}
+body:not(.loggedin) #listUser th:nth-child(9), body:not(.loggedin) #listUser td:nth-child(9){
+    display: none
+}
+.tbl-wrap2{
+    overflow: auto;
+    max-width: 100%
+}
+table tr:focus, table tr:hover{
+    background-color: #ccefcc
+}
+.open-ppl .pp-register .pp-header{
+    display: none
+}
+@media (max-width: 600px){
+    h1{
+        font-size: 20px
+    }
+    img.logo{
+        width: 150px
+    }
+    .pp-reg-inner{
+        padding: 40px 30px 20px;
+        height: 600px
+    }
+    h2{
+        font-size: 20px
+    }
+}
+.fake-code button{
+    margin-top: 20px
+}
+.real-code{
+    display: none
+}
+.send-code button.close-pp-reg{
+    display: none
+}
+.send-code table#listUser{
+    opacity: 0
+}
+.pp-header h2.show-on-logged{
+    display: none
+}
+.open-pp2 button.btn-reg-ok{
+    display: none
+}
+.open-pp2 .pp-header h2{
+    display: none
+}
+.open-pp2 .pp-header h2.show-on-logged{
+    display: block
+}
+.frm-row .frm-input[readonly]{
+    background-color: #f1f1f1;
+    border: none
+}
+span#frm_code{
+    color: green;
+    font-size: 30px;
+    font-weight: 700
+}
+.frm_code{
+    display: none
+}
+.open-pp2 .frm_code{
+    display: block
+}
+table td:nth-child(4){
+    color: green;
+    font-weight: 700;
+    font-size: 20px
+}
+.tbl-search{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px
+}
+.tbl-search input#tbl_search{
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    width: 200px
+}
+.tbl-search-result{
+    background: #fff;
+    color: #000
+}
+.tbl-search-result ol{
+    margin: 10px 0 0 20px;
+    text-align: left;
+    padding: 20px
+}
+.tbl-search-result h4{
+    margin: 0
+}
+.tbl-search-result p{
+    margin: 0
+}
+.tbl-search-result span{
+    padding-right: 10px
+}
+.tbl-search-result span:after{
+    content: ':'
+}
+.tbl-search-result ol p{
+    padding-bottom: 5px
+}
+.tbl-search-result ol p:nth-child(3) strong{
+    color: green
+}
+.tbl-search-result > p{
+    padding: 10px;
+    margin: 10px
+}
+.btn-reg-edit{
+    display: none
+}
+.open-pp2 .btn-reg-edit{
+    display: block
+}
+span#frm_code.has-change:before{
+    content: attr(data-code) ' => ';
+}
+button.close-pp-config {
+    padding: 5px;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.close-pp-config svg {
+    color: #fff;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    display: block;
+}
+.pp-config {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    display: none;
+    max-width: 90%;
+    width: 500px;
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0 0 20px #00000024;
+}
+.open-pc .pp-config{
+    display: block;
+}
+.pp-config input#frm_c_limit {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0;
+}
+.pp-config textarea {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0;
+    width: 100%;
+    font-family: inherit;
+}
