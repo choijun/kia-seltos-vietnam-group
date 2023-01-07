@@ -362,3 +362,6 @@ button.close-pp-config {
     width: 100%;
     font-family: inherit;
 }
+.display-info {
+    color: #fff;
+}
